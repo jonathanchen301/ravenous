@@ -1,16 +1,21 @@
+/** I will become the best full-stack engineer the world has ever seen. */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Business from './Components/Business/business';
-
+// import Business from './Components/Business/business';
+// import { BusinessClass } from './Components/Business/business.js';
+// import Dominos from './Components/Business/dominos.webp';
+import BusinessGrid from './Components/BusinessGrid/BusinessGrid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Business />
+    {/* <Business props={business} /> */}
+    <BusinessGrid />
   </React.StrictMode>
 );
 

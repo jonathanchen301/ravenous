@@ -1,43 +1,47 @@
 import React from 'react';
-import './business.css';
+import './Business.css';
 // import GoatPizza from './goat_pizza.jpg';
-import Dominos from './dominos.webp';
+// import Dominos from './dominos.webp';
 
-const exampleBusiness = {
-    image: Dominos,
-    name: 'Goat Pizza',
-    address: '1234 Pizza St.',
-    city: 'Pizza Town',
-    state: 'CA',
-    zip: '12345',
-    category: 'Italian',
-    rating: '4.5',
-    reviews_count: '100',
+export class BusinessClass {
+
+    constructor(image, name, address, city, state, zip, category, rating, reviews_count) {
+        this.image = image;
+        this.name = name;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.category = category;
+        this.rating = rating;
+        this.reviews_count = reviews_count;
+    }
+
 }
 
-function Business() {
+function Business({ props }) {
     return (
         <div className="container">
             <div className="image">
-                <img src={exampleBusiness.image} alt="Goat Pizza" />
+                <img src={props.image} alt="Goat Pizza" />
             </div>
 
             <div className='text-container'>
 
                 <div className='title'>
-                    <h1> {exampleBusiness.name} </h1>
+                    <h1> {props.name} </h1>
                 </div>
                 <div className='content'>
                     <div className='left'>
-                        <p> {exampleBusiness.address} </p>
-                        <p> {exampleBusiness.city} </p>
-                        <p> {exampleBusiness.state} {exampleBusiness.zip} </p>
+                        <p> {props.address} </p>
+                        <p> {props.city} </p>
+                        <p> {props.state} {props.zip} </p>
                     </div>
 
                     <div className='right'>
-                        <p> {exampleBusiness.category} </p>
-                        <p> {exampleBusiness.rating} </p>
-                        <p> {exampleBusiness.reviews_count} reviews </p>
+                        <p> {props.category} </p>
+                        <p> {props.rating} </p>
+                        <p> {props.reviews_count} reviews </p>
                     </div>
                 </div>
             </div>
